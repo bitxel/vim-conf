@@ -112,16 +112,3 @@ hi PmenuSbar    cterm=none ctermfg=none      ctermbg=Gray
 hi PmenuThumb   cterm=none ctermfg=DarkGreen ctermbg=Gray
 
 
-""""""""""""""""""""""""""""""""""""""""""""""
-" include bundle,shortcuts,newfile configs
-""""""""""""""""""""""""""""""""""""""""""""""
-if filereadable(expand("~/.vim/bundle.vim"))
-        source ~/.vim/bundle.vim
-endif
-if filereadable(expand("~/.vim/shortcut.vim"))
-        source ~/.vim/shortcut.vim
-endif
-if filereadable(expand("~/.vim/newfile.vim"))
-        source ~/.vim/newfile.vim
-endif
-
