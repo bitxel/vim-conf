@@ -1,4 +1,4 @@
-# VIM conf for server
+# VIM conf for server and desktop use
 
 This vim configuration file is based on [ma6174/vim](https://github.com/ma6174/vim). This version resemble conf files, seperate it into server conf and user conf, remove some useless and duplicated options.
 
@@ -15,4 +15,3 @@ git clone -b server https://github.com/bitxel/vim-conf.git
 ```
 git clone https://github.com/bitxel/vim-conf.git
 ```
-
