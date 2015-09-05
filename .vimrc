@@ -111,6 +111,19 @@ hi PmenuSel     cterm=none ctermfg=Black     ctermbg=Gray
 hi PmenuSbar    cterm=none ctermfg=none      ctermbg=Gray
 hi PmenuThumb   cterm=none ctermfg=DarkGreen ctermbg=Gray
 
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
+autocmd FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
+autocmd FileType css setlocal dict+=~/.vim/dict/css.dict
+autocmd FileType c setlocal dict+=~/.vim/dict/c.dict
+autocmd FileType cpp setlocal dict+=~/.vim/dict/cpp.dict
+autocmd FileType scale setlocal dict+=~/.vim/dict/scale.dict
+autocmd FileType javascript setlocal dict+=~/.vim/dict/javascript.dict
+autocmd FileType html setlocal dict+=~/.vim/dict/javascript.dict
+autocmd FileType html setlocal dict+=~/.vim/dict/css.dict
+autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
+autocmd BufRead,BufNewFile *.{go}   set filetype=go
+autocmd BufRead,BufNewFile *.{js}   set filetype=javascript
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " include bundle,shortcuts,newfile configs
