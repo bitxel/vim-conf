@@ -20,27 +20,27 @@ Bundle 'Blackrush/vim-gocode'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'tomtom/tcomment_vim'
+" python completion
+Bundle 'davidhalter/jedi-vim'  
+Bundle "pangloss/vim-javascript"
+Bundle 'tacahiroy/ctrlp-funky'
 
 " not github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Auto-Pairs'
 Bundle 'a.vim'
 Bundle 'python-imports.vim'
-Bundle 'jedi-vim'
 Bundle 'CaptureClipboard'
 Bundle 'ctrlp-modified.vim'
 Bundle 'last_edit_marker.vim'
 Bundle 'synmark.vim'
-"Bundle 'Python-mode-klen'
 Bundle 'SQLComplete.vim'
 Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
 "Bundle 'JavaScript-Indent'
 "Bundle 'Better-Javascript-Indentation'
 "Bundle 'jslint.vim'
-Bundle "pangloss/vim-javascript"
 Bundle 'Vim-Script-Updater'
 Bundle 'ctrlp.vim'
-Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'jsbeautify'
 Bundle 'The-NERD-Commenter'
 "django

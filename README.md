@@ -4,14 +4,14 @@ This vim configuration file is based on [ma6174/vim](https://github.com/ma6174/v
 
 ### Server Configuration
 
-Extra plugins is redundant for server side VIM, so branch `server` is a VIM with basic configurations.
+Extra plugins is redundant for server side VIM, so branch `server` only contains basic configurations.
 
 ```
-git clone -b server https://github.com/bitxel/vim-conf.git ~/
+wget -qO- https://raw.githubusercontent.com/bitxel/vim-conf/server/setup.sh | sh
 ```
 
 ### Desktop Configuration
 
 ```
-git clone https://github.com/bitxel/vim-conf.git ~/
+wget -qO- https://raw.githubusercontent.com/bitxel/vim-conf/master/setup.sh | sh
 ```

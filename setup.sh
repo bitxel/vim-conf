@@ -14,12 +14,12 @@ if which brew >/dev/null;then
     sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future easy_install twisted
 fi
 
-# sudo easy_install -ZU autopep8 twisted
-# sudo ln -s /usr/bin/ctags /usr/local/bin/ctags
+sudo easy_install -ZU autopep8 twisted
+sudo ln -s /usr/bin/ctags /usr/local/bin/ctags
 mv -f ~/.vim ~/.vim_old
 mv -f ~/.vimrc ~/.vimrc_old
 cd ~/ && git clone https://github.com/bitxel/vim-conf.git ~/.vim
 ln -sf ~/.vim/.vimrc ~/
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 vim bundle -c "BundleInstall" -c "q" -c "q"
 echo "Done"
