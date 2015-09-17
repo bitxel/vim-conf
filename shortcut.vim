@@ -84,7 +84,16 @@ map <F8> :call Rungdb()<CR>
 func! Rungdb()
 	exec "w"
 	exec "!g++ % -g -o %<"
-	exec "!gdb ./%<"
+    if has("unix")
+        let s:uname = system("uname")
+        if s:uname == "Darwin\n"
+            exec "!sudo gdb ./%<"
+        else
+            exec "!gdb ./%<"
+        endif
+    else
+        exec "!gdb ./%<"
+    endif
 endfunc
 
 
