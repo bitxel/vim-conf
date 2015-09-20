@@ -93,10 +93,11 @@ set showmatch
 set matchtime=1
 " 光标移动到buffer的顶部和底部时保持3行距离
 set scrolloff=3
-"高亮光标所在行
+"高亮所在行
 set cul
 autocmd InsertEnter * set cul
-set cuc
+"高亮所在列
+" set cuc
 set shortmess=atI   
 " 设置背景主题，在主题存在colors文件夹中  
 color desert 
