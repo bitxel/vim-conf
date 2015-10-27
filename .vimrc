@@ -1,6 +1,7 @@
 """""""""""""""""""
 " Basic Setting
 """""""""""""""""""
+" 必须第一行
 set nocompatible 
 syntax on
 set ff=unix
@@ -15,8 +16,8 @@ set expandtab
 set wrap
 set linebreak
 set fo+=mB
-" 在visual模式允许使用鼠标，选取包括cursor
-set mouse=v
+" 在所有模式允许使用鼠标，选取包括cursor
+set mouse=a
 set selection=inclusive
 set selectmode=mouse,key
 " 搜索忽略大小写
@@ -34,7 +35,7 @@ set cindent
 " 显示行号
 set number
 " 历史记录数
-set history=1000
+set history=100
 " 搜索逐字符高亮
 set hlsearch
 " 搜索实时匹配
@@ -95,7 +96,6 @@ set matchtime=1
 set scrolloff=3
 "高亮所在行
 set cul
-autocmd InsertEnter * set cul
 "高亮所在列
 " set cuc
 set shortmess=atI   
@@ -112,19 +112,27 @@ hi PmenuSel     cterm=none ctermfg=Black     ctermbg=Gray
 hi PmenuSbar    cterm=none ctermfg=none      ctermbg=Gray
 hi PmenuThumb   cterm=none ctermfg=DarkGreen ctermbg=Gray
 
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
-autocmd FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
-autocmd FileType css setlocal dict+=~/.vim/dict/css.dict
-autocmd FileType c setlocal dict+=~/.vim/dict/c.dict
-autocmd FileType cpp setlocal dict+=~/.vim/dict/cpp.dict
-autocmd FileType scale setlocal dict+=~/.vim/dict/scale.dict
-autocmd FileType javascript setlocal dict+=~/.vim/dict/javascript.dict
-autocmd FileType html setlocal dict+=~/.vim/dict/javascript.dict
-autocmd FileType html setlocal dict+=~/.vim/dict/css.dict
-autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
-autocmd BufRead,BufNewFile *.{go}   set filetype=go
-autocmd BufRead,BufNewFile *.{js}   set filetype=javascript
+if has("autocmd")
+    autocmd InsertEnter * set cul
+    autocmd FileType python set omnifunc=pythoncomplete#Complete
+    autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
+    autocmd FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
+    autocmd FileType css setlocal dict+=~/.vim/dict/css.dict
+    autocmd FileType c setlocal dict+=~/.vim/dict/c.dict
+    autocmd FileType cpp setlocal dict+=~/.vim/dict/cpp.dict
+    autocmd FileType scale setlocal dict+=~/.vim/dict/scale.dict
+    autocmd FileType javascript setlocal dict+=~/.vim/dict/javascript.dict
+    autocmd FileType html setlocal dict+=~/.vim/dict/javascript.dict
+    autocmd FileType html setlocal dict+=~/.vim/dict/css.dict
+    autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
+    autocmd BufRead,BufNewFile *.{go}   set filetype=go
+    autocmd BufRead,BufNewFile *.{js}   set filetype=javascript
+    " 记录上次访问位置
+    autocmd BufReadPost *
+      \ if line("'\"") > 1 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
+endif " has("autocmd")
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " include bundle,shortcuts,newfile configs

@@ -20,8 +20,9 @@ Bundle 'Blackrush/vim-gocode'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'Valloric/YouCompleteMe'
 " python completion
-Bundle 'davidhalter/jedi-vim'  
+" Bundle 'davidhalter/jedi-vim'  
 Bundle "pangloss/vim-javascript"
 Bundle 'tacahiroy/ctrlp-funky'
 
@@ -88,3 +89,8 @@ let g:ctrlp_extensions = ['funky']
 let g:jedi#documentation_command = 50
 
 set rtp+=$GOROOT/misc/vim
+
+"YouCompleteMe config
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_enable_diagnostic_highlighting = 0
