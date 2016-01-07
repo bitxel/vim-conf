@@ -147,3 +147,5 @@ if filereadable(expand("~/.vim/newfile.vim"))
         source ~/.vim/newfile.vim
 endif
 
+let mapleader=","
+nmap <silent> <leader>g :YcmCompleter GoTo<CR>
