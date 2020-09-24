@@ -96,7 +96,7 @@ set scrolloff=3
 "高亮光标所在行
 set cul
 autocmd InsertEnter * set cul
-set cuc
+" set cuc
 set shortmess=atI   
 " 设置背景主题，在主题存在colors文件夹中  
 color desert 
