@@ -4,6 +4,9 @@
 set nocompatible 
 syntax on
 set ff=unix
+" map F1 key to ESC to avoid misoperation
+map <F1> <Esc>
+imap <F1> <Esc>
 " Tab和缩近
 set tabstop=4
 set softtabstop=4
