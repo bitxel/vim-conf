@@ -1,12 +1,15 @@
 """""""""""""""""""
 " Basic Setting
 """""""""""""""""""
+" 必须第一行
 set nocompatible 
 syntax on
 set ff=unix
 " map F1 key to ESC to avoid misoperation
 map <F1> <Esc>
 imap <F1> <Esc>
+" map QQ to :q!
+nmap QQ :q!<CR>
 " Tab和缩近
 set tabstop=4
 set softtabstop=4
@@ -18,8 +21,8 @@ set expandtab
 set wrap
 set linebreak
 set fo+=mB
-" 在visual模式允许使用鼠标，选取包括cursor
-set mouse=v
+" 在所有模式允许使用鼠标，选取包括cursor
+set mouse=a
 set selection=inclusive
 set selectmode=mouse,key
 " 搜索忽略大小写
@@ -37,7 +40,7 @@ set cindent
 " 显示行号
 set number
 " 历史记录数
-set history=1000
+set history=100
 " 搜索逐字符高亮
 set hlsearch
 " 搜索实时匹配
@@ -96,13 +99,13 @@ set showmatch
 set matchtime=1
 " 光标移动到buffer的顶部和底部时保持3行距离
 set scrolloff=3
-"高亮光标所在行
+"高亮所在行
 set cul
-autocmd InsertEnter * set cul
+"高亮所在列
 " set cuc
 set shortmess=atI   
 " 设置背景主题，在主题存在colors文件夹中  
-color desert 
+" color desert 
 " 输入的命令显示出来
 set showcmd 
 " 状态行
@@ -113,7 +116,6 @@ hi Pmenu        cterm=none ctermfg=White     ctermbg=DarkGray
 hi PmenuSel     cterm=none ctermfg=Black     ctermbg=Gray
 hi PmenuSbar    cterm=none ctermfg=none      ctermbg=Gray
 hi PmenuThumb   cterm=none ctermfg=DarkGreen ctermbg=Gray
-
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
 autocmd FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
@@ -127,3 +129,4 @@ autocmd FileType html setlocal dict+=~/.vim/dict/css.dict
 autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
 autocmd BufRead,BufNewFile *.{go}   set filetype=go
 autocmd BufRead,BufNewFile *.{js}   set filetype=javascript
+
